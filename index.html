@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Space Elephant - Meteor Postgres</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/business-frontpage.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Image Background Page Header -->
+    <!-- Note: The background image is set within the business-casual.css file. -->
+    <header class="business-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="tagline">Space Elephant: Meteor-Postgres</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <hr>
+
+        <div class="row">
+            <div class="col-sm-8">
+                <h2>PostgresSQL implementation for Meteor</h2>
+                <p>We implemented basic PostgreSQL support for Meteor. Check out the project on <a href="https://github.com/meteor-stream/meteor-postgres">github</a>.</p>
+            </div>
+            <div class="col-sm-4">
+                <h2>Contact Us</h2>
+                <address>
+                    <span><strong>Paulo Diniz:</strong>  pdiniz@pdiniz.com</span><br>
+                    <span><strong>Kate Jefferson:</strong>  barbedbella@gmail.com</span><br>
+                    <span><strong>Eric Liu:</strong>  uchileo@gmail.com</span><br>
+                    <span><strong>Eddie Dolan:</strong>  dolan.charles08@gmail.com</span><br>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <div class="row">
+            <div class="col-sm-4">
+                <img class="img img-responsive img-center" src="./png/chart32.png" alt="">
+                <h2>Database Everywhere</h2>
+                <p>We imeplemented PostgresSQL on the back-end, and used alasql to implement minisql (our version of minimongo) on the front-end. We designed an ORM modeled after Ruby's Active Recrod to wrap both allowing for one interface to interact with both. This also aligns our implementation with Meteor's principle of 'One Languague"</p>
+            </div>
+            <div class="col-sm-4">
+                <img class="img img-responsive img-center" src="./png/cloud383.png" alt="">
+                <h2>Full Stack Reactivity</h2>
+                <p>Using Postgres' Notify capabilities we were able to have updates to the server automatically propgate to connected clients using DDP.</p>
+            </div>
+            <div class="col-sm-4">
+                <img class="img img-responsive img-center" src="./png/binary10.png" alt="">
+                <h2>Latency Compensation</h2>
+                <p>In our implementation of SQL.Collection we transact with the local database, minisql, before we invoke the server side transaction. When the client recieves the noritfaction from the client of the new transaction, it updates the local database to ensure correct information. </p>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Space Elephant 2014</p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
