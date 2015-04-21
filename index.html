@@ -41,7 +41,7 @@
                     <h1 style="display:inline;" >Space Elephant</h1>
                 </div>
             </span>
-                <p>PostgresSQL implementation for Meteor Check out the project on <a href="https://github.com/meteor-stream/meteor-postgres">github</a>.</p>
+                <strong><p>PostgresSQL implementation for Meteor. Check out the project on <a href="https://github.com/meteor-stream/meteor-postgres">GitHub</a>.</p></strong>
             </div>
             <div class="col-sm-4">
                 <h2>Contact Us</h2>
@@ -60,17 +60,23 @@
             <div class="col-sm-4">
                 <img class="img img-responsive img-center" src="./png/chart32.png" alt="">
                 <h2>Database Everywhere</h2>
-                <p>We implemented PostgresSQL on the back-end, and used alasql to implement minisql (our version of minimongo) on the front-end. We designed an ORM modeled after Ruby's Active Record to wrap both allowing for one interface to interact with both. This also aligns our implementation with Meteor's principle of 'One Language'.</p>
+                <p>We implemented PostgresSQL with Node-Postgres on the back-end and miniSQL with AlaSQL (our version
+                    of minimongo) on the front-end. We designed a chaining ORM to wrap both, creating one interface for
+                    both to maintain Meteor's 'One Language' principle.</p>
             </div>
             <div class="col-sm-4">
                 <img class="img img-responsive img-center" src="./png/cloud383.png" alt="">
                 <h2>Full Stack Reactivity</h2>
-                <p>Using Postgres' Notify capabilities we were able to have updates to the server automatically propagate to connected clients using DDP.</p>
+                <p>Although PostgreSQL does not have oplog capabilities, we were able to use Postgres's Notify
+                    functionality. With Notify, we were able to automatically synchronize the server and the
+                    clients using DDP. </p>
             </div>
             <div class="col-sm-4">
                 <img class="img img-responsive img-center" src="./png/binary10.png" alt="">
                 <h2>Latency Compensation</h2>
-                <p>In our implementation of SQL.Collection we transact with the local database, minisql, before we invoke the server side transaction. When the client receives the notification from the client of the new transaction, it updates the local database to ensure correct information. </p>
+                <p>We transact with the local database, minisql, before we
+                    invoke the server side transaction. When the client receives the notification from the client of
+                    the new transaction, it updates the local database to ensure correct information. </p>
             </div>
         </div>
         <!-- /.row -->
